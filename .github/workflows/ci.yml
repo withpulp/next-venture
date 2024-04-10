@@ -1,0 +1,111 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+      - next
+      - feat/*
+  pull_request:
+    branches:
+      - main
+      - master
+      - develop
+      - next
+      - feat/*
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "NODE_VERSION=$(cat .github/nodejs.version)" >> $GITHUB_ENV
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "yarn"
+      - name: Install dependencies
+        run: yarn ci
+      - if: github.event_name == 'pull_request'
+        name: Validate all commits from PR
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+      - name: Lint check
+        run: yarn lint
+      - name: Type check
+        run: yarn check:types
+      - name: Format check
+        run: yarn prettier
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "NODE_VERSION=$(cat .github/nodejs.version)" >> $GITHUB_ENV
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "yarn"
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Restore Next.js build cache
+        uses: actions/cache@v3
+        with:
+          path: .next/cache
+          # This key template accounts for the branch and OS, and integrates a hash of all relevant files.
+          # Adjust the files to hash based on what impacts your build's reproducibility.
+          key: ${{ runner.os }}-nextjs-${{ github.ref }}-${{ hashFiles('**/yarn.lock', '**/*.js', '**/*.ts', '**/*.jsx', '**/*.tsx', '**/next.config.mjs') }}
+          # This attempts to restore caches from the current branch first, then from the main (or master) branch as a fallback.
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ github.ref }}-
+            ${{ runner.os }}-nextjs-main-
+            ${{ runner.os }}-nextjs-master-
+            ${{ runner.os }}-nextjs-
+
+      - name: Build Next.js app
+        env:
+          SKIP_BUILD_PRODUCT_REDIRECTS: 1
+        run: yarn build
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "NODE_VERSION=$(cat .github/nodejs.version)" >> $GITHUB_ENV
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "yarn"
+      - name: Install dependencies
+        run: yarn ci
+      - name: Build Next.js for E2E tests
+        run: yarn build
+      - name: Install Playwright Browsers
+        run: yarn playwright install --with-deps
+      - name: Unit tests
+        run: yarn test
+      - name: Smoke & Acceptance tests
+        run: |
+          yarn storybook:build --quiet
+          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "npx http-server storybook-static --port 6006 --silent" \
+            "npx wait-on tcp:127.0.0.1:6006 && yarn storybook:test"
+      - name: E2E tests
+        run: yarn test:e2e
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: test-results
+          path: test-results/
+          retention-days: 7

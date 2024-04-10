@@ -1,0 +1,90 @@
+@layer base {
+  h1 {
+    @apply
+      font-headline
+      font-bold
+      leading-normal
+      text-11xl
+      md:text-16xl
+      xl:text-22xl;
+  }
+
+  h2 {
+    @apply
+      font-headline
+      font-bold
+      leading-tight
+      text-9xl
+      md:text-14xl
+      xl:text-19xl;
+  }
+  
+  h3 {
+    @apply
+      font-headline
+      font-bold
+      leading-tight
+      text-7xl
+      md:text-11xl
+      xl:text-15xl;
+  }
+  
+  h4 {
+    @apply
+      font-headline
+      font-semibold
+      leading-snug
+      text-5xl
+      md:text-9xl
+      xl:text-13xl;
+  }
+  
+  h5 {
+    @apply
+      font-headline
+      font-semibold
+      leading-snug
+      text-4xl
+      md:text-7xl
+      xl:text-10xl;
+  }
+  
+  h6 {
+    @apply
+      font-headline
+      font-semibold
+      leading-tight
+      text-3xl
+      md:text-5xl
+      xl:text-8xl;
+  }
+
+  p {
+    @apply
+      font-body
+      font-normal
+      leading-normal
+      text-base
+      md:text-md
+      xl:text-lg;
+  }
+
+  small {
+    @apply
+      font-body
+      font-normal
+      leading-tight
+      text-xs
+      md:text-sm
+      xl:text-base;
+  }
+
+  button {
+    @apply
+      font-headline
+      !font-semibold
+      uppercase
+      leading-none
+      tracking-wide;
+  }
+}

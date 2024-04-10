@@ -1,0 +1,62 @@
+# Ref: https://help.github.com/articles/ignoring-files/
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# database
+*.db
+prisma/migrations
+
+# testing
+coverage
+test-results
+playwright-report
+playwright/.cache
+
+# storybook
+storybook-static
+
+# next.js
+.next
+out
+
+# cache
+.cache
+.swc
+
+# production
+build
+
+# misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# custom dirs
+local
+designs
+
+# npm
+.npm-only-allow
+
+# vercel
+.vercel
+
+# sentry
+.sentryclirc
+
+/.npm-only-allow

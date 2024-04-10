@@ -1,0 +1,35 @@
+/* TEAM */
+Co-Founder: Damir Vazgird
+Site: damirvazgird.com
+Contact: damir [at] withpulp.com
+Twitter: @dvazgird
+From: Las Vegas, NV, USA
+
+Co-Founder: Husam Machlovi
+Site: husammachlovi.com
+Contact: husam [at] withpulp.com
+Twitter: @husam_machlovi
+From: New York, NY, USA
+
+/* THANKS */
+JS Framework: NextJS
+Twitter: @nextjs
+
+CSS Utility: TailwindCSS
+Twitter: @tailwindcss
+
+UI Library: NextUI
+Twitter: @getnextui
+
+Language: TypeScript
+Twitter: @TypeScript
+
+Serverless Hosting: Vercel
+Twitter: @vercel
+
+/* SITE */
+Last Update: 2024/04/06
+Language: English
+Doctype: HTML5
+IDE: VSC, Figma
+Software: React, NextJS, TailwindCSS, NextUI, TypeScript, Vercel

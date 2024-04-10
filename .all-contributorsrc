@@ -1,0 +1,28 @@
+{
+  "projectName": "next-venture",
+  "projectOwner": "withpulp",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "dvzrd",
+      "name": "Damir Vazgird",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3902597?v=4",
+      "profile": "https://damir.io/",
+      "contributions": [
+        "code",
+        "doc",
+        "infra"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": true,
+  "commitType": "docs"
+}
