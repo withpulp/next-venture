@@ -3,12 +3,12 @@ import app from "@/config/app.config"
 
 const FeaturesPage = () => (
   <>
-    <Section as="header" className="justify-end gap-unit-4 md:gap-unit-6 xl:gap-unit-8">
-      <h1 className="mt-unit-8 md:mt-unit-10 xl:mt-unit-12">Features</h1>
+    <Section as="header" className="justify-end gap-4 md:gap-6 xl:gap-8">
+      <h1 className="mt-8 md:mt-10 xl:mt-12">Features</h1>
       <p>{app.description}</p>
     </Section>
-    <Section className="gap-unit-6 md:gap-unit-8 xl:gap-unit-10">
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+    <Section className="gap-6 md:gap-8 xl:gap-10">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🏎️ Fast Performance</h5>
         <p className="max-w-2xl">
           Utilizing{" "}
@@ -18,7 +18,7 @@ const FeaturesPage = () => (
           for blazing fast performance with an optimized configuration and the App Directory for enhanced productivity.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>💅 Tailored Styling</h5>
         <p className="max-w-2xl">
           Rapid UI development with{" "}
@@ -28,7 +28,7 @@ const FeaturesPage = () => (
           , a utility-first CSS framework designed for customizing your design faster and easier.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>✨ Code Quality</h5>
         <p className="max-w-2xl">
           Ensure clean, consistent, and error-free code with{" "}
@@ -42,7 +42,7 @@ const FeaturesPage = () => (
           , integrated for best practices and style consistency.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🛠️ Ultimate Type Safety</h5>
         <p className="max-w-2xl">
           Employing{" "}
@@ -52,7 +52,7 @@ const FeaturesPage = () => (
           with the <code>ts-reset</code> library for unparalleled type safety.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🚀 Seamless Workflows</h5>
         <p className="max-w-2xl">
           Pre-configured{" "}
@@ -62,7 +62,7 @@ const FeaturesPage = () => (
           for smooth development workflows, including bundle size and performance statistics.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>💯 Optimized Performance</h5>
         <p className="max-w-2xl">
           Achieve a perfect score with{" "}
@@ -77,7 +77,7 @@ const FeaturesPage = () => (
           for your site's performance, accessibility, and SEO.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>⚙️ Next Bundle Analyzer</h5>
         <p className="max-w-2xl">
           Keep an eye on your bundle size with{" "}
@@ -87,7 +87,7 @@ const FeaturesPage = () => (
           , ensuring your application remains efficient and optimized.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🦺 Jest & React Testing Library</h5>
         <p className="max-w-2xl">
           For rock-solid unit and integration tests, we use{" "}
@@ -101,7 +101,7 @@ const FeaturesPage = () => (
           to ensure reliability and developer confidence.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🧪 Playwright</h5>
         <p className="max-w-2xl">
           Write end-to-end and integration tests like a pro with{" "}
@@ -111,7 +111,7 @@ const FeaturesPage = () => (
           , enhancing your testing capabilities and application quality.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🎉 Storybook</h5>
         <p className="max-w-2xl">
           Create, test, and showcase your components interactively with{" "}
@@ -121,14 +121,14 @@ const FeaturesPage = () => (
           , a powerful tool for developing UI components in isolation.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🚬 Smoke Testing & Acceptance Tests</h5>
         <p className="max-w-2xl">
           Ensure the integrity of your deployments with comprehensive smoke testing and acceptance tests, crucial for
           maintaining high-quality production environments.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🦊 Husky for Git Hooks</h5>
         <p className="max-w-2xl">
           Simplify your Git hooks management with{" "}
@@ -138,7 +138,7 @@ const FeaturesPage = () => (
           , making pre-commit checks and other git hooks easy and efficient.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🚫 Lint-staged</h5>
         <p className="max-w-2xl">
           Automate running linters on Git staged files with{" "}
@@ -148,7 +148,7 @@ const FeaturesPage = () => (
           , ensuring code quality before commits are even made.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🚓 Commitlint</h5>
         <p className="max-w-2xl">
           Maintain clean and consistent git commit messages with{" "}
@@ -158,14 +158,14 @@ const FeaturesPage = () => (
           , aiding in automated changelog generation and project maintainability.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>💡 Absolute Imports</h5>
         <p className="max-w-2xl">
           Simplify your import statements and decrease complexity with Absolute Imports, leveraging the `@` prefix to
           streamline your project's structure and import process.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🏄 Next UI</h5>
         <p className="max-w-2xl">
           Build beautiful, fast, and modern user interfaces with{" "}
@@ -175,42 +175,42 @@ const FeaturesPage = () => (
           , a React UI library that's designed for the future of interface design.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🎨 Tailwind Variants</h5>
         <p className="max-w-2xl">
           Unlock the full potential of Tailwind CSS with custom variants, enabling a more expressive and dynamic design
           system for your projects.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>📝 Automated Package Patching</h5>
         <p className="max-w-2xl">
           Manage external dependencies with ease using Automated Package Patching, ensuring your projects stay up to
           date and secure without manual oversight.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>📈 Components Coupling and Cohesion Graphs</h5>
         <p className="max-w-2xl">
           Visualize and manage your component relationships with Components Coupling and Cohesion Graphs, helping to
           maintain a clean and efficient architecture.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🤖 Automated ChatGPT Code Reviews</h5>
         <p className="max-w-2xl">
           Stay on the cutting edge with AI-powered code reviews from Automated ChatGPT, enhancing code quality and
           development practices for solo developers and startups.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>🎁 Semantic Release</h5>
         <p className="max-w-2xl">
           Streamline your release process with Semantic Release, automating changelog generation and versioning with a
           high level of precision and efficiency.
         </p>
       </div>
-      <div className="flex flex-col gap-unit-1 md:gap-unit-2 xl:gap-unit-3">
+      <div className="flex flex-col gap-1 md:gap-2 xl:gap-3">
         <h5>💻 T3 Env</h5>
         <p className="max-w-2xl">
           Manage your environment variables effortlessly with T3 Env, providing a robust and secure method to handle

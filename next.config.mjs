@@ -15,15 +15,16 @@ jiti("./src/libs/env")
  */
 const config = bundleAnalyzer({
   reactStrictMode: true,
-  images: {
-    remotePatterns: [
-      {
-        protocol: "http",
-        hostname: "books.google.com",
-        pathname: "**",
-      },
-    ],
-  },
+  // Add remote image patterns to allow images from external sources
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: "http",
+  //       hostname: "books.google.com",
+  //       pathname: "**",
+  //     },
+  //   ],
+  // },
 })
 
 export default config
