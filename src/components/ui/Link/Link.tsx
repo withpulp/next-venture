@@ -31,6 +31,12 @@ import { tv, type VariantProps } from "tailwind-variants"
 //   },
 // })
 
+// TODO:
+// - automatically set isExternal attributes using url validation
+// - add accessibility attributes
+// -- use react-aria - https://react-spectrum.adobe.com/react-aria
+// -- create Link with useLink hook from NextUI to get aria attributes - https://nextui.org/docs/components/link#custom-implementation
+
 const linkStyles = tv({
   base: ["relative inline-flex items-center outline-none tap-highlight-transparent", ...dataFocusVisibleClasses],
   variants: {

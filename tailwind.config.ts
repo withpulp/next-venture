@@ -12,7 +12,7 @@ const config: Config = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}", // Adding this temporarily to fix missing switch styles
-    // "./node_modules/@nextui-org/theme/dist/components/(button|image|link|skeleton|switch).js", // Add this when switch is available in theme components
+    // "./node_modules/@nextui-org/theme/dist/components/(button|image|skeleton|switch).js", // Add this when switch is available in theme components
   ],
   theme: {
     container: {

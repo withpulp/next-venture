@@ -17,6 +17,9 @@ export const defaultTheme: Theme = "light"
 export const brandColors = {
   primary: "#49d07c", // Color sampled from logo in: /public/assets/images/logo.png
   secondary: "#0e222d", // Color sampled from background in: /public/assets/images/banner.png
+  default: "#7a7a81", // Color sampled from a lighter version of the secondary color
+  background: "#efeff5",
+  foreground: "#0b0b0c",
 }
 
 // Base Colors
@@ -24,27 +27,27 @@ export const brandColors = {
 // - The base color scales are defined from light to dark with 50 as the lightest and 900 as the darkest (reverse the scale if dark theme is your default).
 // - The DEFAULT (background) values will fallback to 400 for light themes and 500 for dark themes.
 // - The foreground values will fallback to 900 for light themes and 50 for dark themes.
-// - You have the option to set custom DEFAULT and foreground values for each theme's color scale, if you want.
+// - You have the option to set custom DEFAULT and foreground values for each theme"s color scale, if you want.
 // - How to generate color scales (this is only a suggestion):
 //   1. Use https://colors.eva.design/ to generate semantic colors using the base primary color (in this case the green logo color).
 //   2. Copy your preferred color value from the generated scales (this is helpful for success, warning, and danger colors).
 //   3. Use https://smart-swatch.netlify.app/ to generate the color scales for success, warning, and danger.
 const baseColors = {
-  // These are available incase you don't want pure white or black colors (just be mindful of accessibility contrast issues)
+  // These are available incase you don"t want pure white or black colors (just be mindful of accessibility contrast issues)
   black: "#000",
   white: "#fff",
-  // Default colors (generated from gray color that matches primary brand color)
+  // Default colors
   default: {
-    50: "#f0f4f4",
-    100: "#d9dede",
-    200: "#bec9c9",
-    300: "#a2b2b2",
-    400: "#869d9d",
-    500: "#6d8484",
-    600: "#566767",
-    700: "#3e4949",
-    800: "#262c2c",
-    900: "#0b0f0f",
+    50: "#f1f1fd",
+    100: "#d8d8df",
+    200: "#bdbdc3",
+    300: "#a3a3a9",
+    400: "#89898f",
+    500: "#707076",
+    600: "#57575d",
+    700: "#3e3e44",
+    800: "#25252b",
+    900: "#0b0b16",
   },
   // Primary colors
   primary: {
@@ -115,8 +118,8 @@ const baseColors = {
 
 const lightColors: ThemeColors = {
   // Layout Colors
-  background: baseColors.white,
-  foreground: baseColors.black,
+  background: brandColors.background,
+  foreground: brandColors.foreground,
   divider: baseColors.default[300],
   overlay: baseColors.default[900],
   focus: baseColors.primary[400],
@@ -128,20 +131,18 @@ const lightColors: ThemeColors = {
   // Default Colors
   default: {
     ...baseColors.default,
-    DEFAULT: baseColors.default[400],
-    foreground: baseColors.black,
   },
   // Primary Colors
   primary: {
     ...baseColors.primary,
-    DEFAULT: baseColors.primary[400],
+    DEFAULT: brandColors.primary,
     foreground: brandColors.secondary,
   },
   // Secondary Colors
   secondary: {
     ...baseColors.secondary,
     DEFAULT: brandColors.secondary,
-    foreground: baseColors.primary[400],
+    foreground: brandColors.primary,
   },
   // Success Colors
   success: {
@@ -165,8 +166,8 @@ const lightColors: ThemeColors = {
 
 const darkColors: ThemeColors = {
   // Layout Colors
-  background: baseColors.black,
-  foreground: baseColors.white,
+  background: brandColors.foreground,
+  foreground: brandColors.background,
   divider: baseColors.default[600],
   overlay: baseColors.default[50],
   focus: baseColors.primary[500],
@@ -178,8 +179,8 @@ const darkColors: ThemeColors = {
   // Default Colors
   default: {
     ...reverseColorScale(baseColors.default, "dark"),
-    DEFAULT: baseColors.default[600],
-    foreground: baseColors.white,
+    DEFAULT: baseColors.default[400],
+    foreground: baseColors.black,
   },
   // Primary Colors
   primary: {
