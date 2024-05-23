@@ -1,4 +1,4 @@
-# Next Venture </br> [![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link] [![GitHub contributors][github-contributors-badge]][github-contributors-badge-link] [![Discord][discord-badge]][discord-badge-link]
+# Next Venture </br> [![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link]
 
 Welcome to _Next Venture_, a Next.js starter template packaged and pre configured with the latest industry standard dev features, so you can focus on developing your next product.
 
@@ -18,7 +18,7 @@ Next Venture is packaged with the following dev features:
 - 🦺 **[Jest](https://jestjs.io/)** and **[React Testing Library](https://testing-library.com/react)** - For rock-solid unit and integration tests
 - 🧪 **[Playwright](https://playwright.dev/)** - Write end-to-end and integration tests like a pro
 - 🎉 **[Storybook](https://storybook.js.org/)** - Create, test, and showcase your components
-- 🚬 **[Smoke Testing** and **Acceptance Tests](https://storybook.js.org/docs/writing-tests)** - For confidence in your deployments
+- 🚬 **[Smoke Testing and Acceptance Tests](https://storybook.js.org/docs/writing-tests)** - For confidence in your deployments
 - 🦊 **[Husky for Git Hooks](https://typicode.github.io/husky/)** - Git hooks made easy with Husky
 - 🚫 **[Lint-staged](https://github.com/lint-staged/lint-staged)** - For running linters on Git staged files
 - 🚓 **[Commitlint](https://commitlint.js.org/)** - Linting for git commits with Commitlint
@@ -350,9 +350,5 @@ Lots of open source contributors have indirectly helped make this app possible, 
 
 [check-workflow-badge]: https://img.shields.io/github/actions/workflow/status/blazity/next-enterprise/check.yml?label=check
 [github-license-badge]: https://img.shields.io/github/license/blazity/next-enterprise?link=https%3A%2F%2Fgithub.com%2Fwithpulp%2Fnext-venture%2Fblob%2Fmain%2FLICENSE
-[github-contributors-badge]: https://img.shields.io/github/contributors/blazity/next-enterprise?link=https%3A%2F%2Fgithub.com%2FBlazity%2Fnext-enterprise%2Fgraphs%2Fcontributors
-[discord-badge]: https://img.shields.io/discord/1111676875782234175?color=7b8dcd&link=https%3A%2F%2Fblazity.com%2Fdiscord
 [check-workflow-badge-link]: https://github.com/withpulp/next-venture/actions/workflows/check.yml
 [github-license-badge-link]: https://github.com/withpulp/next-venture/blob/main/LICENSE
-[github-contributors-badge-link]: https://github.com/withpulp/next-venture/graphs/contributors
-[discord-badge-link]: https://next-venture.vercel.app/discord

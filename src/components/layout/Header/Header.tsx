@@ -8,7 +8,7 @@ import app from "@/config/app.config"
 
 const Header = () => (
   <Section as="header" className="container">
-    <Link href="/" size="lg" className="font-headline font-semibold flex gap-unit-2 md:gap-unit-3 xl:gap-unit-4">
+    <Link href="/" size="lg" className="font-headline font-semibold flex gap-2 md:gap-3 xl:gap-4">
       <Image alt={`${app.name} Logo`} src="/assets/images/logo.png" width={48} height={48} /> {app.name}
     </Link>
   </Section>

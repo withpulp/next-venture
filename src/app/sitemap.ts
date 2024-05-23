@@ -1,21 +1,24 @@
 import type { MetadataRoute } from "next"
 
-import app from "@/config/app.config"
+import { formatDate, getBaseUrl } from "@/utils/helper.utils"
 
 // Ref: https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
+
+const currentDate = formatDate(new Date())
+const baseUrl = getBaseUrl()
 
 const sitemap = (): MetadataRoute.Sitemap => {
   // Set URLs to add to the sitemap
   const urls: MetadataRoute.Sitemap = [
     {
-      url: app.url,
-      lastModified: new Date(),
+      url: `${baseUrl}/`,
+      lastModified: currentDate,
       changeFrequency: "yearly",
       priority: 1,
     },
     {
-      url: `${app.url}/features`,
-      lastModified: new Date(),
+      url: `${baseUrl}/features`,
+      lastModified: currentDate,
       changeFrequency: "yearly",
       priority: 1,
     },

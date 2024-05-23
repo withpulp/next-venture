@@ -12,10 +12,10 @@ const sectionStyles = tv({
     },
     size: {
       none: "p-0",
-      sm: "px-unit-2 py-unit-3 md:p-unit-4 xl:px-unit-6 xl:py-unit-5",
-      md: "px-unit-4 py-unit-5 md:p-unit-6 xl:px-unit-8 xl:py-unit-7",
-      lg: "px-unit-6 py-unit-7 md:p-unit-8 xl:px-unit-10 xl:py-unit-9",
-      xl: "px-unit-8 py-unit-9 md:p-unit-10 xl:px-unit-12 xl:py-unit-11",
+      sm: "px-2 py-3 md:p-4 xl:px-6 xl:py-5",
+      md: "px-4 py-5 md:p-6 xl:px-8 xl:py-7",
+      lg: "px-6 py-7 md:p-8 xl:px-10 xl:py-9",
+      xl: "px-8 py-9 md:p-10 xl:px-12 xl:py-11",
     },
   },
   defaultVariants: {
@@ -27,22 +27,22 @@ const sectionStyles = tv({
     {
       size: "sm",
       variant: "row",
-      className: "gap-unit-unit-2 md:gap-unit-unit-4 xl:gap-unit-unit-6",
+      className: "gap-2 md:gap-4 xl:gap-6",
     },
     {
       size: "md",
       variant: "row",
-      className: "gap-unit-4 md:gap-unit-6 xl:gap-unit-8",
+      className: "gap-4 md:gap-6 xl:gap-8",
     },
     {
       size: "lg",
       variant: "row",
-      className: "gap-unit-6 md:gap-unit-8 xl:gap-unit-10",
+      className: "gap-6 md:gap-8 xl:gap-10",
     },
     {
       size: "xl",
       variant: "row",
-      className: "gap-unit-8 md:gap-unit-10 xl:gap-unit-12",
+      className: "gap-8 md:gap-10 xl:gap-12",
     },
   ],
 })

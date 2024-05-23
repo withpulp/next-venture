@@ -2,12 +2,10 @@ import "@/styles/tailwind.css"
 
 import type { Metadata } from "next"
 import { Chakra_Petch, Noto_Serif } from "next/font/google"
-import type { ReactNode } from "react"
+import { type ReactNode, Suspense } from "react"
 
-import { Footer } from "@/components"
+import { Analytics, Footer, Providers } from "@/components"
 import { app, brandColors } from "@/config"
-
-import Providers from "./providers"
 
 // App Fonts
 // - Ref: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
@@ -113,6 +111,9 @@ const RootLayout = ({ children }: RootLayoutProps) => (
         {children}
         <Footer />
       </Providers>
+      <Suspense>
+        <Analytics />
+      </Suspense>
     </body>
   </html>
 )

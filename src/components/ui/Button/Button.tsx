@@ -9,7 +9,7 @@ import { extendVariants } from "@nextui-org/system"
 const Button = extendVariants(UIButton, {
   variants: {
     size: {
-      xl: "px-unit-8 min-w-unit-28 h-unit-14 text-large gap-unit-4",
+      xl: "px-8 min-w-28 h-14 text-large gap-4",
     },
   },
   defaultVariants: {

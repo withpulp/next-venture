@@ -37,14 +37,12 @@
     "isolatedModules": true,
     "incremental": true,
 
-    "types": ["node", "jest", "@testing-library/jest-dom"],
-
     // Path aliases
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "@/api/*": ["./src/app/api/*"],
-      "@/public/*": ["./public/*"]
+      "@/assets/*": ["./public/assets/*"]
     },
 
     // Editor support
@@ -64,5 +62,5 @@
     ".next/types/**/*.ts",
     "next-env.d.ts"
   ],
-  "exclude": ["node_modules", "out"]
+  "exclude": ["coverage", "node_modules", "out", "public", "test-results"]
 }
