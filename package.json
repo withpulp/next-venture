@@ -41,7 +41,7 @@
     "prepare": "husky",
     "preinstall": "npx npm-only-allow@latest --PM yarn",
     "postinstall": "npx patch-package -y",
-    "gen:coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.ts|reset.d.ts|postcss.config.js|playwright.config.ts|next.config.mjs|next-env.d.ts|jest.config.ts|jest.setup.ts|lint-staged.config.js|commitlint.config.ts|coverage/|src/middleware.ts|tests/|test-results/|README.md|CHANGELOG.md|.storybook/|.eslintrc.json' --image graph.svg"
+    "gen:coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.ts|reset.d.ts|postcss.config.js|playwright.config.ts|next.config.mjs|next-env.d.ts|jest.config.ts|jest.setup.ts|lint-staged.config.js|commitlint.config.ts|coverage/|src/middleware.ts|src/styles/|src/store/|src/libs/|src/config/|src/app/sitemap.ts|src/app/robots.ts|src/components/index.ts|tests/|test-results/|README.md|CHANGELOG.md|.storybook/|.eslintrc.json' --image graph.svg"
   },
   "dependencies": {
     "@next/third-parties": "^14.2.3",
